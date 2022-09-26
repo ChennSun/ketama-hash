@@ -1,12 +1,19 @@
 package ketama
 
+import (
+	"crypto/md5"
+	"hash"
+)
+
 func init() {
 
 }
 
-// 哈希方法
-func hashFunc() {
-
+// generate hash digest array
+func HashFunc(content []byte) []byte {
+	var commonHash hash.Hash = md5.New()
+	commonHash.Write(content)
+	return commonHash.Sum(nil)
 }
 
 // 获取key所在的物理节点信息
