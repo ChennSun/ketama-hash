@@ -16,6 +16,7 @@ type Node struct {
 
 // virtual ring
 var ringMap map[uint32]Node
+
 var sortHashSlice []uint32
 
 func init() {
